@@ -14,6 +14,8 @@ export const PrevButton = ({ enabled, onClick }) => (
   </button>
 );
 
+console.log("main cmp");
+
 export const NextButton = ({ enabled, onClick }) => (
   <button
     className="embla__button embla__button--next ml-2 disabled:cursor-no-drop"
