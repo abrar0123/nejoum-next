@@ -1,0 +1,233 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root{
+--color-dark-blue: #013188;
+--color-teal-blue: #005fb7;
+--color-azure-blue: #0093ff;
+--color-light-blue: #bce0fd;
+--color-yellow-orange: #ffb100;
+--color-outer-space: #343D40;
+--color-medium-grey: #7f7f7f;
+--color-light-grey: #ebebeb;
+--color-hover-grey: #e0e0e0;
+}
+
+@font-face {
+    font-family: Lina soft;
+    font-weight: bold;
+    src: url("/assets/font/Zaza type - Lina soft Bold.otf") format("opentype");
+}
+@font-face {
+    font-family: Lina soft;
+    font-weight: light;
+    src: url("/assets/font/Zaza type - Lina soft Light.otf") format("opentype");
+}
+@font-face {
+    font-family: Lina soft;
+    src: url("/assets/font/Zaza type - Lina soft Regular.otf") format("opentype");
+}
+
+body{
+  font-family: 'Source Sans Pro', sans-serif;
+}
+body[dir="rtl"],body[dir="rtl"] .font-sen{
+  font-family: 'Almarai', sans-serif;
+}
+.font-sen{
+  font-family: 'Sen', sans-serif;
+}
+
+a {
+  @apply text-blue-700;
+}
+
+a:hover {
+  @apply border-b-2 border-blue-700;
+}
+
+
+
+.content p {
+  @apply my-6;
+}
+
+.content ul {
+  @apply my-6;
+}
+
+.bg-dark-blue{
+  background: var(--color-dark-blue)
+}
+.bg-light-grey{
+  background: var(--color-light-grey)
+}
+.bg-medium-grey{
+  background: var(--color-medium-grey)
+}
+.bg-hover-grey{
+  background: var(--color-hover-grey)
+}
+.bg-teal-blue{
+  background: var(--color-teal-blue)
+}
+
+.bg-azure-blue{
+  background: var(--color-azure-blue)
+}
+
+.bg-yellow-orange{
+  background: var(--color-yellow-orange)
+}
+
+.bg-outer-space{
+  background: var(--color-outer-space)
+}
+
+.border-dark-blue{
+  border-color: var(--color-dark-blue)
+}
+
+.border-teal-blue{
+  border-color: var(--color-teal-blue)
+}
+
+.border-azure-blue{
+  border-color: var(--color-azure-blue)
+}
+
+.border-yellow-orange{
+  border-color: var(--color-yellow-orange)
+}
+
+.border-outer-space{
+  border-color: var(--color-outer-space)
+}
+
+.border-medium-grey{
+  border-color: var(--color-medium-grey)
+}
+
+.border-light-grey{
+  border-color: var(--color-light-grey)
+}
+.text-medium-gray{
+  color: var(--color-medium-grey)
+}
+.text-dark-blue{
+  color: var(--color-dark-blue)
+}
+
+.text-teal-blue{
+  color: var(--color-teal-blue)
+}
+
+.text-azure-blue{
+  color: var(--color-azure-blue)
+}
+
+.text-yellow-orange{
+  color: var(--color-yellow-orange)
+}
+
+.text-outer-space{
+  color: var(--color-outer-space)
+}
+
+.text-medium-grey{
+  color: var(--color-medium-grey)
+}
+
+.text-light-grey{
+  color: var(--color-light-grey)
+}
+
+.partners-logo-box{
+  box-shadow: 0px 2px 4px #eee, 0px -1px 4px #eee
+}
+
+.complaint-box{
+  box-shadow: 1px 1px 6px 0px #999;
+}
+
+.story-cover-text-shadow{
+  text-shadow: 5px 5px 35px #626d7a;
+}
+.shadow-lg{
+  box-shadow: 1px 1px 6px 0px #999;
+}
+
+.breadcrumb li:not(:last-child):after{
+  content: '/ ';
+  color: var(--color-medium-grey);
+  padding: 0 4px;
+}
+
+.our-values li::marker{
+    color: var(--color-yellow-orange);
+}
+
+.container{
+  max-width: 70%;
+}
+
+.dirltr{
+  direction:ltr;
+}
+[dir="rtl"] select {
+  background-position: left 0.5rem center;
+}
+@media screen and (max-width:768px){
+  .container{
+    max-width: 90%;
+  }
+}
+
+.three-icons{
+  width: 28px;
+  padding: 3.5px;
+  cursor: pointer;
+  display: inline-block;
+  opacity: 0.8;
+}
+
+.table_top_div{
+  max-height: 50vh !important;
+}
+
+.all_tables{
+  margin-bottom: 5px;
+}
+
+.table_auction_img{
+      max-height: 36px !important;
+}
+
+
+body[dir="rtl"] .right-text{
+  float: left;
+  margin-left: 9px;
+}
+body[dir="ltr"] .right-text{
+  float: right;
+  margin-right: 9px;
+
+}
+
+
+@layer components {
+  .close-button {
+    @apply border-[#013188] text-[#013188] my-1 inline-block max-w-max rounded-full border-2 px-3 py-1 text-base font-medium;
+  }
+  .right-x-button {
+    @apply float-right mr-[14px] mt-2 cursor-pointer text-[25px] font-bold text-red-400;
+  }
+  .form-head {
+    @apply bg-light-grey border-medium-grey rounded-lg border p-4 sm:w-full md:w-2/3 lg:w-1/2 xl:w-1/3 2xl:w-1/4;
+  }
+  .submit-button {
+    @apply  bg-[#013188] hover:bg-[#013088d3] mx-auto my-4 block px-4 py-1 text-lg font-semibold text-white;
+  }
+
+}
